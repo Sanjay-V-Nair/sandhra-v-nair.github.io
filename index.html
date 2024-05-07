@@ -31,11 +31,16 @@
 
     <div class="whole">
 
+        <!-- HOME SECTION -->
         <section class="home" id="home">
             <div class="home-content">
                 <h1>Sandhra V Nair</h1>
                 <h3>I'm a <span id="typer"></span></h3>
+
                 <p>Welcome to my Personal Portfolio. Hope you enjoy the surfing through!</p>
+
+
+
                 <div class="social-media">
                     <a href="https://www.facebook.com/sanjay.kizhakkankozhuval" target=_blank><i
                             class='bx bxl-meta'></i></a>
@@ -54,10 +59,51 @@
         </section>
 
 
-        zdxzdfvzdsadsdfdsf
+        <div class="wrapper">
 
-    </div>
-    <!-- HOME SECTION -->
+
+
+        </div>
+
+
+
+
+
+
+        <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+        <script>
+            const typed = new Typed('#typer', {
+                strings: ['Writer', 'Blogger', 'Polyglot'],
+                typeSpeed: 100,
+                backSpeed: 100,
+                backDelay: 1000,
+                loop: true
+            });
+
+            let path = document.querySelector('path')
+            let pathLength = path.getTotalLength()
+
+            path.style.strokeDasharray = pathLength + ' ' + pathLength;
+
+            path.style.strokeDashoffset = pathLength;
+
+            window.addEventListener('scroll', () => {
+                var scorllPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+                var drawLength = pathLength * scorllPercentage;
+                path.style.strokeDashoffset = pathLength - drawLength;
+            })
+
+        </script>
+        <!-- <script src="js/script.js"></script> -->
+        <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+
+        <script>
+            gsap.registerPlugin(ScrollTrigger);
+
+        </script>
 
 
 </body>
