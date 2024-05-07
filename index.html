@@ -14,14 +14,14 @@
 
     <header class="header">
 
-        <a href="#" class="logo">Portfolio</a>
+        <a href="#" class="logo1">Portfolio</a>
 
         <!-- <i class='bx bx-menu' id="menu-icon"></i> -->
 
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
-            <a href="#services">Academics</a>
+            <a href="#academics">Academics</a>
             <a href="#porfolio">Portfolio</a>
             <a href="#contact">Contact</a>
         </nav>
@@ -58,52 +58,196 @@
             </div>
         </section>
 
-
-        <div class="wrapper">
-
+    </div>
 
 
+
+    <!-- ABOUT SECTION -->
+    <div class="about" id="about">
+        <div class="about-img">
+            <img src="images/about.png" alt="">
+        </div>
+        <h2 class="heading">About <span>Me</span></h2>
+        <p>I'm an enthusiastic learner, a
+            language lover and a polyglot,
+            hailing from Kerala.<br>
+            My interests
+            include translation, copyrighting,
+            transcription as well as creative
+            writing. <br>
+            I write in four languages<br><br>
+        <ul>
+            <li>Malayalam</li>
+            <li>English</li>
+            <li>Hindi</li>
+            <li>Sanskrit</li>
+        </ul><br>
+        My works have been
+        published in various magazines and
+        newspapers. </p>
+    </div>
+
+
+
+    <!-- ACADEMICS SECTION -->
+    <div class="wrapper" id="academics">
+        <!-- <h1>Academics</h1> -->
+        <div class="container scrollx">
+
+            <svg viewBox="0 0 900 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+                <path
+                    d="M9.89998 6C9.43671 8.28224 7.41896 10 5 10C2.23858 10 0 7.76142 0 5C0 2.23858 2.23858 0 5 0C7.41896 0 9.43671 1.71776 9.89998 4H445.1C445.563 1.71776 447.581 0 450 0C452.419 0 454.437 1.71776 454.9 4H890.1C890.563 1.71776 892.581 0 895 0C897.761 0 900 2.23858 900 5C900 7.76142 897.761 10 895 10C892.581 10 890.563 8.28224 890.1 6H454.9C454.437 8.28224 452.419 10 450 10C447.581 10 445.563 8.28224 445.1 6H9.89998Z"
+                    fill="#D9D9D9" />
+                <mask id="mask0_0_1" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="900"
+                    height="10">
+                    <path
+                        d="M9.89998 6C9.43671 8.28224 7.41896 10 5 10C2.23858 10 0 7.76142 0 5C0 2.23858 2.23858 0 5 0C7.41896 0 9.43671 1.71776 9.89998 4H445.1C445.563 1.71776 447.581 0 450 0C452.419 0 454.437 1.71776 454.9 4H890.1C890.563 1.71776 892.581 0 895 0C897.761 0 900 2.23858 900 5C900 7.76142 897.761 10 895 10C892.581 10 890.563 8.28224 890.1 6H454.9C454.437 8.28224 452.419 10 450 10C447.581 10 445.563 8.28224 445.1 6H9.89998Z"
+                        fill="#D9D9D9" />
+                </mask>
+                <g mask="url(#mask0_0_1)">
+                    <rect class="mask" y="-49" height="99" fill="black" />
+                </g>
+            </svg>
+
+            <section class="sec1 pin">
+                <span>Higher Secondary</span>
+                <h1>Science Stream- Kerala Board</h1>
+
+                <div class="col">
+                    <p>Rajah's Higher Secondary School</p>
+                    <p>Kerala Board DHSE (Directorate of Higher Secondary Education) <br>
+                        93.75% - 2018 <br>
+                        Excelled academically,
+                        Led in extracurriculars, and volunteered in groups [Bharath Scout and Guids]</p>
+                </div>
+            </section>
+            <section class="sec2 pin">
+                <span class="anim">Bachelor's Degree</span>
+                <h1 class="anim">BA English</h1>
+
+                <div class="col anim">
+                    <p>Kannur University</p>
+                    <p> 87% - 2021 <br>
+                        Immersed myself in English literature, led literary societies, and explored the world of
+                        Literature</p>
+                </div>
+            </section>
+            <section class="sec3 pin">
+                <span class="anim">Master's Degree</span>
+                <h1 class="anim">MA English Literature</h1>
+
+                <div class="col anim">
+                    <p>English & Foreign Language University</p>
+                    <p>X% - 2023 <br>
+                        I delved deeper into literary research, taught undergraduates, and pursued academic leadership.
+                    </p>
+                </div>
+            </section>
         </div>
 
+    </div>
+
+
+    <!-- PORTFOLIO SECTION -->
+    <div class="portfolio">
+
+    </div>
 
 
 
 
+    </div>
 
-        <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
-        <script>
-            const typed = new Typed('#typer', {
-                strings: ['Writer', 'Blogger', 'Polyglot'],
-                typeSpeed: 100,
-                backSpeed: 100,
-                backDelay: 1000,
-                loop: true
+    <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+    <script>
+        const typed = new Typed('#typer', {
+            strings: ['Writer', 'Blogger', 'Polyglot'],
+            typeSpeed: 100,
+            backSpeed: 100,
+            backDelay: 1000,
+            loop: true
+        });
+
+        let path = document.querySelector('path')
+        let pathLength = path.getTotalLength()
+
+        path.style.strokeDasharray = pathLength + ' ' + pathLength;
+
+        path.style.strokeDashoffset = pathLength;
+
+        window.addEventListener('scroll', () => {
+            var scorllPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+            var drawLength = pathLength * scorllPercentage;
+            path.style.strokeDashoffset = pathLength - drawLength;
+        })
+
+    </script>
+    <!-- <script src="js/script.js"></script> -->
+    <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+
+    <script>
+        const container = document.querySelector(".container");
+        const sections = gsap.utils.toArray(".container section");
+        const texts = gsap.utils.toArray(".anim");
+        const mask = document.querySelector(".mask");
+
+        let scrollTween = gsap.to(sections, {
+            xPercent: -100 * (sections.length - 1),
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".container",
+                pin: true,
+                scrub: 1,
+                end: "+=3000",
+                //snap: 1 / (sections.length - 1),
+                // markers: true,
+            }
+        });
+
+        console.log(1 / (sections.length - 1))
+
+        //Progress bar animation
+
+        gsap.to(mask, {
+            width: "100%",
+            scrollTrigger: {
+                trigger: ".wrapper",
+                start: "top left",
+                scrub: 1
+            }
+        });
+
+        // whizz around the sections
+        sections.forEach((section) => {
+            // grab the scoped text
+            let text = section.querySelectorAll(".anim");
+
+            // bump out if there's no items to animate
+            if (text.length === 0) return
+
+            // do a little stagger
+            gsap.from(text, {
+                y: -130,
+                opacity: 0,
+                duration: 2,
+                ease: "elastic",
+                stagger: 0.1,
+                scrollTrigger: {
+                    trigger: section,
+                    containerAnimation: scrollTween,
+                    start: "left center",
+                    // markers: true
+                }
             });
+        });
 
-            let path = document.querySelector('path')
-            let pathLength = path.getTotalLength()
 
-            path.style.strokeDasharray = pathLength + ' ' + pathLength;
 
-            path.style.strokeDashoffset = pathLength;
-
-            window.addEventListener('scroll', () => {
-                var scorllPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-                var drawLength = pathLength * scorllPercentage;
-                path.style.strokeDashoffset = pathLength - drawLength;
-            })
-
-        </script>
-        <!-- <script src="js/script.js"></script> -->
-        <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
-
-        <script>
-            gsap.registerPlugin(ScrollTrigger);
-
-        </script>
+    </script>
 
 
 </body>
